@@ -1,16 +1,16 @@
+# Output variable definitions
 
-output "website_bucket_arn" {
+output "arn" {
   description = "ARN of the bucket"
-  value       = module.website_s3_bucket.arn
+  value       = aws_s3_bucket.s3_bucket.arn
 }
 
-output "website_bucket_name" {
+output "name" {
   description = "Name (id) of the bucket"
-  value       = module.website_s3_bucket.name
+  value       = aws_s3_bucket.s3_bucket.id
 }
 
-output "website_bucket_domain" {
+output "domain" {
   description = "Domain name of the bucket"
-  value       = module.website_s3_bucket.domain
+  value       = aws_s3_bucket.s3_bucket.website_domain
 }
-
